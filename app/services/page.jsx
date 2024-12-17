@@ -5,29 +5,30 @@ import Link from "next/link"
 
 const services = [
   {
-    num: '01',
-    title: 'Web Developmet',
-    description: 'Laborum earum consectetur dolores repellat pariatur dolorem quas.',
-    href: '',
+    "num": "01",
+    "title": "Web Development",
+    "description": "I specialize in building responsive and dynamic websites using modern web technologies like HTML, CSS, JavaScript, React, and Node.js. I focus on creating user-friendly and efficient web applications that solve real-world problems.",
+    "href": ""
   },
   {
-    num: '02',
-    title: 'Mobile Developmet',
-    description: 'Laborum earum consectetur dolores repellat pariatur dolorem quas.',
-    href: '',
+    "num": "02",
+    "title": "Desktop Application Development",
+    "description": "I have experience developing desktop applications using C# and .NET, building solutions that are both functional and user-friendly. My work includes creating efficient software for managing complex tasks.",
+    "href": ""
   },
   {
-    num: '03',
-    title: 'UI/UX Design',
-    description: 'Laborum earum consectetur dolores repellat pariatur dolorem quas.',
-    href: '',
+    "num": "03",
+    "title": "Mobile Development",
+    "description": "I am expanding my knowledge in mobile app development and am currently exploring frameworks like React Native to build cross-platform applications that provide seamless user experiences on both iOS and Android.",
+    "href": ""
   },
   {
-    num: '04',
-    title: 'Logo Design',
-    description: 'Laborum earum consectetur dolores repellat pariatur dolorem quas.',
-    href: '',
+    "num": "04",
+    "title": "Blog Writing",
+    "description": "I enjoy writing blog posts about technology, programming, and software development. I share my insights and experiences with others, aiming to help both beginners and advanced developers grow in their fields.",
+    "href": ""
   }
+  
 ]
 
 import { motion } from "framer-motion"
@@ -56,7 +57,7 @@ const Services = () => {
                 </Link>
               </div>
               {/**Title */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{services.title} </h2>
+              <h2 className="text-[40px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{services.title} </h2>
               {/**desc */}
               <p className="text-white/60">{services.description} </p>
               {/**border */}

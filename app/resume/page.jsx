@@ -8,13 +8,17 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaCuttlefish,
+  FaCSharp,
+  FaDatabase,
+  FaJava
 } from "react-icons/fa"
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
 
 const about = {
   title: "About me",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error mollitia doloremque at.",
+  description: "I am Ananthakumar Vithurshanan, a passionate Software Engineering student at Sabaragamuwa University of Sri Lanka, with a strong interest in web development and programming. I have experience working with various technologies like JavaScript, React, Node.js, and MongoDB, and I have built several full-stack projects. Throughout my studies and online courses, I have developed a solid understanding of software development, both front-end and back-end, and I’m always eager to learn new skills. I enjoy working on projects that solve real-world problems and am committed to growing as a developer.",
   info: [
     {
       fieldName: "Name",
@@ -50,26 +54,26 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error mollitia doloremque at.",
+  description: "I am Ananthakumar Vithurshanan, a third-year Software Engineering student at Sabaragamuwa University. I have a strong foundation in web development, with experience in technologies such as Next.js, React.js, JavaScript, MongoDB, MySQL, Tailwind CSS, CSS, and HTML. I am also skilled in desktop application development, proficient in C, C#, and MySQL. My academic journey and hands-on projects have enhanced my problem-solving abilities and strengthened my understanding of full-stack development. I am passionate about building efficient, user-friendly applications and continuously improving my skills to meet the dynamic needs of the tech industry.",
   items: [
     {
-      company: "Tech Solutions Inc.",
+      Learn: "Self learn",
       position: "FullStack Developer",
       duration: "2024 - Present",
     },
     {
-      company: "Web Design Studio",
+      Learn: "Self learn",
       position: "Front-End Developer",
       duration: "2022 - 2023",
     },
     {
-      company: "E-Commerce Startup",
-      position: "Freelance Web Developer",
+      Learn: "Self learn",
+      position: "Basic Programing",
       duration: "2020 - 2022",
     },
     {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
+      Learn: "Beginner Lecel",
+      position: "Enter the Computing field",
       duration: "Summer-2019",
     },
 
@@ -79,28 +83,32 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error mollitia doloremque at.",
+  description: "I am currently pursuing a Bachelor of Science (Hons) in Software Engineering at Sabaragamuwa University of Sri Lanka, with an expected graduation date in February 2026. Throughout my studies, I have gained a strong foundation in programming, data structures, algorithms, and software development methodologies, maintaining a GPA of 3.22. Prior to this, I completed my Advanced Level studies in the Science Stream at V/Tamil Maha Vidhyalayam in Vavuniya, where I developed a keen interest in technology and engineering. My academic journey has equipped me with the skills necessary to excel in the software engineering field, and I continue to expand my knowledge through both practical projects and theoretical learning.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "FullStack Web Development Bootcamp",
+      experienceTitle: "Full-Stack Web Development Bootcamp",
+      institution: "Codeacademy",
+      describe: "Completed an intensive bootcamp focused on full-stack web development, gaining hands-on experience with technologies like React, Node.js, Express, and MongoDB.",
       duration: "2023",
     },
     {
+      experienceTitle: "Front-End Track",
       institution: "Codeacademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      describe: "Enhanced my front-end development skills, including HTML, CSS, JavaScript, and frameworks such as React, to build dynamic and responsive user interfaces.",
+      duration: "2023",
     },
     {
+      experienceTitle: "Programming Course",
       institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2019-2022",
+      describe: "Undertook various programming courses covering languages such as C, Java, and JavaScript, helping me build a solid foundation in coding principles.",
+      duration: "2019 - 2022",
     },
     {
+      experienceTitle: "Certified Web Developer",
       institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019-2021",
-    },
+      describe: "Completed a certification program in web development, learning the fundamentals of building web applications, server-side development, and front-end technologies.",
+      duration: "2019 - 2021",
+    }
   ]
 }
 
@@ -127,6 +135,20 @@ const skills = {
     {
       icon: <SiNextdotjs />,
       name: "Next.Js"
+    },
+    {
+      icon: <FaJava />,
+      name: "Java"
+    },
+    
+    
+    {
+      icon: <FaDatabase />,
+      name: "MongoDB"
+    },
+    {
+      icon: <FaDatabase />,
+      name: "MySQL"
     },
     {
       icon: <SiTailwindcss />,
@@ -176,12 +198,12 @@ const Resume = () => {
           <div className="min-h-[70vh] w-full">
             {/**experience */}
             <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-[30px] text-justify xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title} </h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description} </p>
+                <p className="max-w-[800px] text-white/60 mx-auto xl:mx-0">{experience.description} </p>
                 <ScrollArea className="h-[300px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item , index) => {
+                    {experience.items.map((item, index) => {
                       return (
                         <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-center gap-1 ">
                           <span className="text-accent" >{item.duration} </span>
@@ -189,7 +211,7 @@ const Resume = () => {
                           <div className="flex items-center gap-3" >
                             {/**dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent" ></span>
-                            <p className="text-white/60">{item.company} </p>
+                            <p className="text-white/60">{item.Learn} </p>
                           </div>
                         </li>
                       )
@@ -202,20 +224,23 @@ const Resume = () => {
 
             {/**education */}
             <TabsContent value="education" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-[30px] text-justify xl:text-justify">
                 <h3 className="text-4xl font-bold">{education.title} </h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description} </p>
-                <ScrollArea className="h-[300px]">
+                <p className="max-w-[800px] text-white/60 mx-auto xl:mx-0">{education.description} </p>
+                <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item , index) => {
+                    {education.items.map((item, index) => {
                       return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-center gap-1 ">
-                          <span className="text-accent" >{item.degree} </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position} </h3>
+                        <li key={index} className="bg-[#232329] h-[400px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-center gap-1 ">
+
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.experienceTitle} </h3>
+                          <span className="text-accent" >{item.describe} </span>
                           <div className="flex items-center gap-3" >
                             {/**dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent" ></span>
                             <p className="text-white/60">{item.institution} </p>
+
+                            <p className="text-white/60">{item.duration} </p>
                           </div>
                         </li>
                       )
@@ -230,12 +255,12 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px] ">
                 <div className="flex flex-col gap-[30px] items-center xl:text-left">
-                    <h3 className="text-4xl font-bold">{skills.title} </h3>
-                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <h3 className="text-4xl font-bold">{skills.title} </h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}</p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill , index) => {
+                  {skills.skillList.map((skill, index) => {
                     return <li key={index} >
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
@@ -255,13 +280,13 @@ const Resume = () => {
 
 
             {/**about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
-              <div className="flex flex-col gap-[30px]">
+            <TabsContent value="about" className="w-full text-justify xl:text-justify">
+              <div className="flex flex-col gap-[30px] mb-10">
                 <h3 className="text-4xl font-bold">{about.title} </h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description} </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[820px] mx-auto xl:mx-0">
-                  {about.info.map((item ,index) => {
-                    return(
+                  {about.info.map((item, index) => {
+                    return (
                       <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
                         <span className="text-white/60">{item.fieldName} </span>
                         <span className="text-xl">{item.FieldValue} </span>

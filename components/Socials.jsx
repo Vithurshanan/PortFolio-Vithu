@@ -1,28 +1,31 @@
-import { Item } from "@radix-ui/react-select"
-import { icons } from "lucide-react"
-import Link from "next/link"
-import { FaGithub , FaLinkedinIn , FaYoutube , FaTwitter} from "react-icons/fa"
+import Link from "next/link";
+import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const SocialsImage = [
-    {icons: <FaGithub /> , Path:"https://github.com/Vithurshanan"},
-    {icons: <FaLinkedinIn /> , Path:"https://www.linkedin.com/in/vithurshanan/"},
-    {icons: <FaYoutube /> , Path:""},
-    {icons: <FaTwitter /> , Path:""},
-]
+  { icons: <FaGithub />, Path: "https://github.com/Vithurshanan" },
+  { icons: <FaLinkedinIn />, Path: "https://www.linkedin.com/in/vithurshanan/" },
+  { icons: <FaYoutube />, Path: "https://www.youtube.com" },
+  { icons: <FaTwitter />, Path: "https://twitter.com" },
+];
 
-const Socials = ( {containerStyles , iconsStyles}) => {
-
+const Socials = ({ containerStyles, iconsStyles }) => {
   return (
     <div className={containerStyles}>
-      {SocialsImage.map((item , index ) => {
+      {SocialsImage.map((item, index) => {
         return (
-            <Link href={item.Path} key={index} className={iconsStyles}> 
+          <Link
+            href={item.Path}
+            key={index}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={iconsStyles}
+          >
             {item.icons}
-            </Link>
-        )
+          </Link>
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default Socials
+export default Socials;
